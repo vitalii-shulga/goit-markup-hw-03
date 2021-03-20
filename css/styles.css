@@ -115,19 +115,20 @@ body {
 .button {
   font-size: 16px;
   text-align: center;
-  border: none;
+  border: 0;
   border-radius: 4px;
+  outline: none;
   cursor: pointer;
 }
 
 .btn-submit {
   padding: 10px 32px;
   background: var(--accent-color);
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   font-weight: 700;
   line-height: 1.87;
   letter-spacing: 0.06em;
   color: var(--txt-dark-bg-color);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 .btn-submit:hover,
@@ -215,9 +216,7 @@ body {
   color: var(--txt-dark-bg-color);
 }
 
-.page-header .link:hover,
-.link:focus,
-.page-footer .link:hover,
+.link:hover,
 .link:focus,
 .link.current {
   color: var(--accent-color);
@@ -253,7 +252,7 @@ body {
   margin-top: 30px;
 }
 
-.services-item,
+.prof-item,
 .portfolio-item {
   --grid-item: 3;
 }
@@ -298,23 +297,26 @@ body {
 
 .team-item {
   width: 270px;
-  height: 368px;
+  min-height: 368px;
   background: var(--bg-main-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
 }
 
-.team-member {
-  font-weight: 500;
+.team-desc {
+  padding-top: 30px;
+  padding-bottom: 30px;
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
   text-align: center;
-  color: var(--txt-title-color);
 }
 
-.team-desc {
-  text-align: center;
+.team-member {
+  margin-bottom: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--txt-title-color);
 }
 
 .filter {
@@ -333,11 +335,25 @@ body {
 .portfolio-item {
   width: 370px;
   min-height: 404px;
+}
+
+.portfolio .link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.portfolio-desc {
+  padding: 20px 24px;
   background: var(--bg-main-color);
   border: 1px solid var(--border-color);
+  border-top: 0;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
 }
 
 .portfolio-title {
+  margin-bottom: 4px;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
