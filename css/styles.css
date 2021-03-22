@@ -1,3 +1,4 @@
+/* переменные */
 :root {
   --txt-main-color: #757575;
   --txt-title-color: #212121;
@@ -105,11 +106,12 @@ body {
 
 .page-header .logo {
   padding-top: 24px;
-  padding-bottom: 25px;
+  padding-bottom: 24px;
   margin-right: 93px;
 }
 
 .page-footer .logo {
+  display: block;
   margin-bottom: 20px;
 }
 
@@ -155,6 +157,7 @@ body {
 
 /* header */
 .page-header {
+  min-height: 60px;
   border-bottom: 1px solid var(--line-color);
   font-weight: 500;
   line-height: 1.14;
@@ -162,7 +165,6 @@ body {
 }
 
 .page-header .container {
-  /* min-height: 80px; */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -173,7 +175,8 @@ body {
   align-items: center;
 }
 
-.nav-list {
+.nav-list,
+.contact-list {
   display: flex;
 }
 
@@ -181,19 +184,14 @@ body {
   margin-right: 50px;
 }
 
-.nav-list .link {
-  display: inline-block;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  color: var(--txt-title-color);
-}
-
-.contact-list {
-  display: flex;
-}
-
 .contact-item:not(:last-child) {
   margin-right: 50px;
+}
+
+.nav-list .link {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: var(--txt-title-color);
 }
 
 /* footer */
@@ -203,21 +201,8 @@ body {
   background: var(--bg-dark-color);
 }
 
-.address {
-  display: flex;
-  flex-direction: column;
-}
-
-.page-footer .address-list {
-  color: var(--txt-contact-color);
-}
-
 .address-item:not(:last-child) {
   margin-bottom: 9px;
-}
-
-.post-address {
-  color: var(--txt-dark-bg-color);
 }
 
 .link:hover,
@@ -227,6 +212,36 @@ body {
 }
 
 /* основной контент */
+.title {
+  font-weight: 700;
+  color: var(--txt-title-color);
+}
+
+.hero-title {
+  margin-bottom: 30px;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.section-title {
+  margin-bottom: 50px;
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-align: center;
+}
+
+.pros-title {
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
 .page-hero {
   padding-top: 200px;
   padding-bottom: 200px;
@@ -261,38 +276,8 @@ body {
   --grid-item: 3;
 }
 
-.title {
-  font-weight: 700;
-  color: var(--txt-title-color);
-}
-
-.hero-title {
-  margin-bottom: 30px;
-  font-weight: 900;
-  font-size: 44px;
-  line-height: 1.36;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-
-.section-title {
-  margin-bottom: 50px;
-  font-size: 36px;
-  line-height: 1.17;
-  letter-spacing: 0.03em;
-  text-align: center;
-}
-
 .pros-section {
   padding-bottom: 0px;
-}
-
-.pros-title {
-  margin-bottom: 10px;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
 }
 
 .team-section {
@@ -357,12 +342,14 @@ body {
   letter-spacing: 0.06em;
 }
 
+/* переопределение цветов */
 .dark-bg .title,
 .dark-bg .button,
-.dark-bg .logo {
+.dark-bg .logo,
+.dark-bg .post-address {
   color: var(--txt-dark-bg-color);
 }
 
-.dark-bg .address-list {
+.dark-bg .address-item {
   color: rgba(255, 255, 255, 0.6);
 }
