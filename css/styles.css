@@ -205,12 +205,6 @@ body {
   margin-bottom: 9px;
 }
 
-.link:hover,
-.link:focus,
-.link.current {
-  color: var(--accent-color);
-}
-
 /* основной контент */
 .title {
   font-weight: 700;
@@ -271,7 +265,7 @@ body {
   margin-top: 30px;
 }
 
-.prof-item,
+.about-item,
 .portfolio-item {
   --grid-item: 3;
 }
@@ -320,11 +314,6 @@ body {
   width: 370px;
 }
 
-.portfolio-list .link {
-  text-decoration: none;
-  color: inherit;
-}
-
 .portfolio-desc {
   padding: 20px 24px;
   background: var(--bg-main-color);
@@ -352,4 +341,19 @@ body {
 
 .dark-bg .address-item {
   color: rgba(255, 255, 255, 0.6);
+}
+
+.link:hover,
+.link:focus,
+.link.current {
+  color: var(--accent-color);
+}
+
+.portfolio-item .link {
+  color: inherit;
+}
+
+.portfolio-item:hover,
+.portfolio-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
